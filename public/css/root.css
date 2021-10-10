@@ -1,0 +1,22 @@
+
+#my-extension-root :host{
+    all:unset;
+}
+
+#my-extension-root{
+    z-index: 2147483647;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: black;
+    all:unset;
+}
+
+div{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}

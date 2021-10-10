@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voice Browser</title>
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+    .helping-guide{
+      background: rgba(30,144,255,0.4);
+    }
+    p{
+      padding: 10px;
+      font-size: 18px;
+      color: rgba(0,0,0,0.8);
+      line-height: 30px;
+    }
+    .body-content-wrapper{
+      margin:40px;
+      display:flex;
+      flex-direction:column;
+      color: black;
+    }
+    .doc-heading{
+      text-align:center;
+    }
+    .modules-description{
+      background-color: white;
+      color: black;
+      border-radius: 6px;
+      padding: 25px;
+    }
+    .module{
+      margin-bottom: 40px;
+    }
+    .module-name{
+      background-color: gainsboro;
+      padding: 5px 5px 5px 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: darkblue;
+    }
+    .module-image{
+      width: 100%;
+      height: 100%;
+      margin: auto 20px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-radius: 10px;
+      padding: 6px;
+      box-shadow: inset rgba(0, 0, 0, 0.4) 0px 0px 5px;
+    }
+    .module-commands{
+      box-shadow: rgba(0, 0, 0, 0.62) 0px 0px 5px;
+      margin: 20px auto;
+    }
+    tr:nth-child(odd) {
+      background-color: aliceblue;
+      color: black;
+    }
+    .table-heading{
+      background-color: steelblue!important;
+      color: white!important;
+    }
+    th,td{
+      padding: 8px;
+      border: 1px solid rgba(0,0,0,0.3);
+    }
+    .try-module{
+      box-shadow: inset rgba(0, 0, 0, 0.4) 0px 0px 5px;
+      border-radius: 2px;
+      padding: 10px 10px 10px 20px;
+      font-size: 18px;
+      line-height: 30px;
+      background-color: rgba(0,0,0,0.02);
+      color: rgba(0,0,0,0.8);
+      margin-top: 20px;
+    }
+    .note{
+      background-color: lavender;
+      margin: 10px 0px 20px 0px;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 16px;
+    }
+    </style>
+  </head>
+
+ <body class="helping-guide" >
+  <div class="body-content-wrapper" >
+    <heading>
+      <h1 class="doc-heading"> Voice Browser Helping Guide </h1>
+    </heading>
+    <section class="note">
+        <i class="fa fa-info-circle" style=" padding: 5px;"></i>Note
+        <ul style="  list-style: disc;  margin-top: 15px; padding-left: 35px;">
+            <li> This options page should always be opened to use this extension. To close this extension, please close this page. </li>
+            <li> Please open only one browser window. Close all other windows if open. This extension supports only one window with multiple tabs. </li>
+        </ul>
+    </section>
+    <div class="modules-description">
+      <section class="module">
+        <h3 class="module-name"> Root </h3>
+        <p> Root is the entry module. From this module you can go to all other by saying their respectuive module names. </p>
+        <!--<img class="module-image"> -->
+        <table class="module-commands">
+          <tr class="table-heading" > 
+            <th> Commands </th> 
+            <th> Desired Action </th>
+          </tr>
+          <tr class="table-commands">
+            <td> Scroll Down </td> 
+            <td> Scrolls down the webpage </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Scroll Up </td> 
+            <td> Scrolls up the webpage </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Scroll Right </td> 
+            <td> Scroll the webpage right </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Scroll Left </td> 
+            <td> Scroll the webpage left </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Top </td> 
+            <td> Goes to the extreme top of the webpage </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Bottom </td> 
+            <td> Goes to the extreme bottom of the webpage </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Zoom In </td> 
+            <td> Increase webpage zoom by 10% </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Zoom Out </td> 
+            <td> Decrease webpage zoom by 10% </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Go Forward </td> 
+            <td> Goes forward if exist </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Go Back </td> 
+            <td> Goes back if exist </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Reload </td> 
+            <td> Reloads the webpage </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Previous Tab </td> 
+            <td> Move to previous tab </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Next Tab </td> 
+            <td> Move to next tab </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> New Tab </td> 
+            <td> Opens a new tab </td> 
+          </tr>
+          <tr class="table-commands">
+            <td> Close Tab </td> 
+            <td> Closes the current tab </td> 
+          </tr>
+        </table>
+        <!-- <div class="try-module"></div> -->
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Auto Scroll </h3>
+        <p> When you are in the root module, say <b>Auto Scroll</b> command to use this module </p>
+        <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+              <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Auto-Scroll.PNG" alt="auto-scroll-module-image">
+            </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+              <table class="module-commands">
+                <tr class="table-heading" > 
+                  <th> Commands </th> 
+                  <th> Desired Action </th>
+                </tr>
+                <tr class="table-commands">
+                  <td> Down </td> 
+                  <td> Automatically scrolls down the webpage </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Up </td> 
+                  <td> Automatically scrolls up the webpage </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Right </td> 
+                  <td> Automatically scroll the webpage right </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Left </td> 
+                  <td> Automatically scroll the webpage left </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Stop </td> 
+                  <td> Stop scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Faster </td> 
+                  <td> Increase speed of scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Slower </td> 
+                  <td> Decrease speed of scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Exit </td> 
+                  <td> Exit from this module and go to root module </td> 
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="try-module"> <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b>Auto Scroll</b></div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Scroll Area </h3>
+        <p> When you want to scroll a sidebar or a menubar or any scrollable inner webpage content, you can 
+            use this module to scroll. When you are in the root module, say <b>Scroll Area</b> command to use this module. 
+            All scrollable area will be highlighted and an ID will be assigned, select which scroll area you want to scroll
+            by telling the respective ID </p>
+         <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+              <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Scroll-Area.PNG" alt="scroll-area-module-image">
+           </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+              <table class="module-commands">
+                <tr class="table-heading" > 
+                  <th> Commands </th> 
+                  <th> Desired Action </th>
+                </tr>
+                <tr class="table-commands">
+                  <td> Down </td> 
+                  <td> Scrolls down the selected area </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Up </td> 
+                  <td> scrolls up the selected area </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Right </td> 
+                  <td> Scrolls the selected area right </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Left </td> 
+                  <td> Scrolls the selected area left </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Auto Down </td> 
+                  <td> Automatically scrolls down the selected area </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Auto Up </td> 
+                  <td> Automatically scrolls up the selected area </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Auto Right </td> 
+                  <td> Automatically scroll the selected area right </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Auto Left </td> 
+                  <td> Automatically scroll the selected area left </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Stop </td> 
+                  <td> Stop automatic scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Faster </td> 
+                  <td> Increase speed of automatic scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Slower </td> 
+                  <td> Decrease speed of automatic scrolling </td> 
+                </tr>
+                <tr class="table-commands">
+                  <td> Exit </td> 
+                  <td> Exit from this module and go to root module </td> 
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="try-module">
+          <div style=" height: 200px; width: 200px; overflow: auto; margin-bottom: 10px;"> Scroll me! Using Scroll Area option. I am partially visible. To see my full content you need to scroll this area. ForHorizontalScrollImadethistextwithoutspace</div>
+          <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b>Scroll Area</b>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Open URL </h3>
+        <p> When you want to open a particular URL or website, you can 
+            use this module. When you are in the root module, just say <b>Open</b> command to use this module. 
+            The module shall request you to say the URL or website name or address.</p>
+        <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Open-URL.PNG" alt="open-url-module-image">
+        <div class="try-module">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b>Open</b></div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Search </h3>
+        <p> When you want to search something, you can use this module. When you are in the root module, just say <b> Search </b> 
+            command to use this module. The module shall request you to say the search query.</p>
+        <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Search.PNG" alt="search-module-image">
+        <div class="try-module">  <i class="fa fa-check-circle" style=" padding: 5px; "></i>Just try by telling <b> Search </b></div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Click </h3>
+        <p> You can use this module when you want to click a link or a button, enter text, select checkbox, control media, 
+            slide a range option, select in dropdown, select a color, select a datetime, month, date, time, week. When you are in the root 
+            module, just say <b>Click</b> command to use this module. All clickable elements will be highlighted with an ID, select which 
+            element you want to click by telling its respective ID </p>
+         <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Click.PNG" alt="click-module-image">
+              </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Scenarios </th> 
+                    <th> Description </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For link or a button </td> 
+                    <td> Clicks it </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For writing based input elements </td> 
+                    <td> Makes the cursor to point to that element and gives <b> Dictate Text </b> module for entering text </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For range input element </td> 
+                    <td> Makes the cursor to point to that element and gives <b> Range </b> module for selecting range </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For color input element </td> 
+                    <td> Gives <b> Color Picker </b> module for selecting color </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For DateTime input element </td> 
+                    <td> Gives <b> DateTime Picker </b> module for selecting datetime </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For Date input element </td> 
+                    <td> Gives <b> Date Picker </b> module for selecting date </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For Month input element </td> 
+                    <td> Gives <b> Month Picker </b> module for selecting month </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For Week input element </td> 
+                    <td> Gives <b> Week Picker </b> module for selecting week </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For Time input element </td> 
+                    <td> Gives <b> Time Picker </b> module for selecting time </td> 
+                  </tr>
+                  <tr class="table-commands">
+                  <td> For Dropdown based element </td> 
+                    <td> Gives <b> Select </b> module for selecting options </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> For Video or Audio element </td> 
+                    <td> Gives <b> Media Control </b> module for controlling video or audio </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module">  <a href="https://www.google.com" target="blank">New webpage</a> <br> 
+          <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b>Click</b>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Dictate Text </h3>
+        <p> When you want to write or enter something, you can use this module. When you are in the click module, and you have selected a
+            text based writable element, then you will get this module. </p>
+        <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img style="max-width: 800px; max-height: 700px; margin: auto; display: flex;" class="module-image" src="module-images/Dictate-Text.PNG" alt="dictate-text-module-image">
+               </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Keyboard </td> 
+                    <td> Opens Keyboard for entering text </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Remove Word </td> 
+                    <td> Removes last word </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Remove line </td> 
+                    <td> Remove current line </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Clean Up </td> 
+                    <td> Delete all the entered text </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Paste </td> 
+                    <td> Paste the copied content </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> If the element is inside a form element, submits the enclosed form. </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module">  <label>Enter Something </label><input type="text" style=" margin-left: 10px;"> <br> 
+         <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> click </b> and select the above input element</div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Media Control </h3>
+        <p> When you want to control a video or audio like play, pause or rewind, you can use this module. When you are in the 
+            click module, and you have selected a video or audio element, then you will get this module. </p>
+       <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 800px; max-height: 700px; margin: auto; display: flex;"  class="module-image" src="module-images/Media-Control.PNG" alt="media-control-module-image">
+             </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Play </td> 
+                    <td> Plays a video or audio </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Pause </td> 
+                    <td> Pauses a video or audio </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Stop</td> 
+                    <td> Continues from the beginning </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Mute </td> 
+                    <td> Mutes Volume </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Unmute </td> 
+                    <td> Unmutes volume </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Volume Up </td> 
+                    <td> Increases volume by 10% </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Volume Down </td> 
+                    <td> Decreases volume by 10% </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Rewind </td> 
+                    <td> Rewinds 10 seconds </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Forward </td> 
+                    <td> Forwards 10 seconds </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <video width="500" height="300" controls="controls">
+            <source src="module-images/video-try.mp4" type="video/mp4">
+          </video>
+          <br>
+          <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and 
+          select the above media element</div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Select </h3>
+        <p> When you want to click a dropdown and select anyone option, you can use this module. When you are in the 
+            click module, and you have selected a select element or dropdown, then you will get this module. </p>
+       <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/Select.PNG" alt="select-module-image">
+              </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Scenario </th> 
+                    <th> Description </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Number </td> 
+                    <td> Tell the ID of the option to select it  </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Scroll Up </td> 
+                    <td> Scroll the area up if area overflowed </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Scroll Down </td> 
+                    <td> Scroll the area down if area overflowed </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <select>
+            <option>Volvo</option>
+            <option>Jaguar</option>
+            <option>Mercedes</option>
+          </select>
+          <p style=" margin-bottom: 0px;" >  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select the above dropdown</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Color </h3>
+        <p> When you want to select a color, you can use this module. When you are in the 
+            click module, and you have selected a color input element, then you will get this module. </p>
+        <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img style="max-width: 600px; max-height: 600px; margin: auto; display: flex;"  class="module-image" src="module-images/Color.PNG" alt="color-module-image">
+               </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Auto Left / Right </td> 
+                    <td> Automatically move slider left or right </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Stop </td> 
+                    <td> Stop automatic slider movement </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Left </td> 
+                    <td> Move left </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Right </td> 
+                    <td> Move right </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Color </td> 
+                    <td> Move to color control </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Lighter </td> 
+                    <td> Move to lighter control </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Darker </td> 
+                    <td> Move to darker control </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit color selection </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="color">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select the above color element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Range </h3>
+        <p> When you want to select a range input, you can use this module. When you are in the 
+            click module, and you have selected a range input element, then you will get this module. </p>
+        <img style=" max-width: 600px; max-height: 600px; margin: auto; display: flex; " class="module-image" src="module-images/Range.PNG" alt="range-module-image">
+        <div class="try-module"> 
+          <input style=" width: 300px;" type="range">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> DateTime-Local </h3>
+        <p> When you want to select a date and time, you can use this module. When you are in the 
+            click module, and you have selected a datetime input element, then you will get this module. </p>
+         <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/DateTime.PNG" alt="datetime-module-image">
+             </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Year/Month/Date/Hour/Minute </td> 
+                    <td> To go to respective control, say their name </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit the selected value </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="datetime-local">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Date </h3>
+        <p> When you want to select a date, you can use this module. When you are in the 
+            click module, and you have selected a date input element, then you will get this module. </p>
+        <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/Date.PNG" alt="date-module-image">
+             </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Year/Month/Date </td> 
+                    <td> To go to respective control, say their name </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit the selected value </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="date">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Month </h3>
+        <p> When you want to select a month, you can use this module. When you are in the 
+            click module, and you have selected a month input element, then you will get this module. </p>
+       <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img  style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/Month.PNG" alt="month-module-image">
+                </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Year/Month </td> 
+                    <td> To go to respective control, say their name </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit the selected value </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="month">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Week </h3>
+        <p> When you want to select a week, you can use this module. When you are in the 
+            click module, and you have selected a week input element, then you will get this module. </p>
+       <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/Week.PNG" alt="week-module-image">
+              </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Year/Month/Week </td> 
+                    <td> To go to respective control, say their name </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit the selected value </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="week">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+      <section class="module">
+        <h3 class="module-name"> Time </h3>
+        <p> When you want to select a time, you can use this module. When you are in the 
+            click module, and you have selected a time input element, then you will get this module. </p>
+        <div class="container"> 
+          <div class="row" style="margin:auto;" >
+            <div class="col-md-12" >
+                <img style="max-width: 600px; max-height: 600px; margin: auto; display: flex;" class="module-image" src="module-images/Time.PNG" alt="time-module-image">
+               </div>
+          </div>
+          <div class="row" style="margin:auto;width: fit-content;" >
+            <div class="col-md-12">
+                <table class="module-commands">
+                  <tr class="table-heading" > 
+                    <th> Command </th> 
+                    <th> Desired Action </th>
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Hour/Minute </td> 
+                    <td> To go to respective control, say their name </td> 
+                  </tr>
+                  <tr class="table-commands">
+                    <td> Submit </td> 
+                    <td> Submit the selected value </td> 
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class="try-module"> 
+          <input type="time">
+          <p  style=" margin-bottom: 0px;">  <i class="fa fa-check-circle" style=" padding: 5px; "></i> Just try by telling <b> Click </b> and select this above element</p>
+        </div>
+      </section>
+    </div>
+    </div>
+    <script src="speech-recognizer-config.js"></script>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="static/js/content.js"></script>
+  </body>
+</html>
